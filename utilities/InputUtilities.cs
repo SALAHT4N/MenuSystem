@@ -1,36 +1,10 @@
-﻿using Airport_Ticket_Booking.DomainLayer.enums;
-
-namespace Airport_Ticket_Booking.ConsoleApp.utilities
+﻿
+namespace CommandSystem.utilities
 {
     public static class InputUtilities
     {
         private const string TryAgainMessage = "Try again!";
-        /// <summary>
-        /// List flight classes for user to select
-        /// </summary>
-        /// <returns>the selected class</returns>
-        public static FlightType ReadClass()
-        {
-            Console.WriteLine($"{(int)FlightType.Economy}: Economy.");
-            Console.WriteLine($"{(int)FlightType.Business}: Business.");
-            Console.WriteLine($"{(int)FlightType.FirstClass}: FlightClass.");
-            
-            int choice = ReadInteger("Choose a class: ");
-            return (FlightType)choice;
-        }
 
-        public static FlightType? ReadClassOptional()
-        {
-            Console.WriteLine($"{(int)FlightType.Economy}: Economy.");
-            Console.WriteLine($"{(int)FlightType.Business}: Business.");
-            Console.WriteLine($"{(int)FlightType.FirstClass}: FlightClass.");
-            Console.WriteLine($"{0}: Ignore.");
-
-            FlightType? flightType;
-            int choice = ReadInteger("Choose a class: ");
-            flightType = (choice == 0) ? null : (FlightType)choice;
-            return flightType;
-        }
         /// <summary>
         /// generic function to display a message and read user input
         /// </summary>
