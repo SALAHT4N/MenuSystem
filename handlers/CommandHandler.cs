@@ -1,6 +1,5 @@
-﻿using Airport_Ticket_Booking.ConsoleApp.commands;
-
-namespace Airport_Ticket_Booking.ConsoleApp.handlers
+﻿
+namespace CommandSystem.handlers
 {
     public class CommandHandler
     {

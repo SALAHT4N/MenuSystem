@@ -1,4 +1,4 @@
-﻿namespace Airport_Ticket_Booking.ConsoleApp.commands
+﻿namespace CommandSystem
 {
     public abstract class Command
     {
