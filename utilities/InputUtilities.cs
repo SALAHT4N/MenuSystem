@@ -1,7 +1,7 @@
 ﻿
 namespace CommandSystem.utilities
 {
-    public static class InputUtilities
+    public class InputUtilities : IInputUtilities
     {
         private const string TryAgainMessage = "Try again!";
 
@@ -10,13 +10,13 @@ namespace CommandSystem.utilities
         /// </summary>
         /// <param name="message">message to log</param>
         /// <returns>user input</returns>
-        public static string? ReadInput(string message)
+        public string? ReadInput(string message)
         {
             Console.Write(message);
             var input = Console.ReadLine();
             return input;
         }
-        public static int ReadInteger(string message)
+        public int ReadInteger(string message)
         {
             Console.Write(message);
             int i;
@@ -28,7 +28,7 @@ namespace CommandSystem.utilities
 
             return i;
         }
-        public static decimal? ReadDecimal(string message)
+        public decimal? ReadDecimal(string message)
         {
             Console.Write(message);
             decimal d;
@@ -40,7 +40,7 @@ namespace CommandSystem.utilities
             return null;
         }
 
-        public static DateTime? ReadDate(string message)
+        public DateTime? ReadDate(string message)
         {
             Console.Write(message);
             DateTime d;
